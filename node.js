@@ -1,14 +1,18 @@
-const { Telegraf } = require('telegraf');
-const bot = new Telegraf('7810652179:AAGJyyA6I6FA2IgY1aTJy8SF2BnIENj6XKI');
+// Подключаем dotenv для работы с .env-файлом
+require('dotenv').config({ path: './bot/.env' });
 
+// Подключаем Telegraf
+const { Telegraf } = require('telegraf');
+
+// Получаем токен из .env-файла
+const bot = new Telegraf(process.env.BOT_TOKEN);
+
+// Пример простой команды
 bot.command('start', (ctx) => {
-  ctx.reply('Открой мини-приложение:', {
-    reply_markup: {
-      inline_keyboard: [[
-        { text: 'Flip MiniApp', web_app: { url: 'https://flip-miniapp-yourname.vercel.app' } }
-      ]]
-    }
-  });
+  ctx.reply('Привет! Это тестовый бот для мини-приложения. Кнопка для запуска mini app появится скоро!');
 });
 
+// Запуск бота
 bot.launch();
+
+console.log('Бот запущен!');
