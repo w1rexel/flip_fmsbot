@@ -1,13 +1,8 @@
-// Подключаем dotenv для работы с .env-файлом
+const { Telegraf } = require('telegraf');
 require('dotenv').config({ path: './bot/.env' });
 
-// Подключаем Telegraf
-const { Telegraf } = require('telegraf');
-
-// Получаем токен из .env-файла
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-// Пример простой команды
 bot.command('start', (ctx) => {
   ctx.reply('Открыть приложение:', {
     reply_markup: {
@@ -21,3 +16,4 @@ bot.command('start', (ctx) => {
   });
 });
 
+bot.launch();
