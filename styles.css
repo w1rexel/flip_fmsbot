@@ -1,34 +1,34 @@
 @font-face {
     font-family: 'geologica';
-    src: url('assets/fonts/geologica-extralight.woff') format('woff');
+    src: url('/assets/fonts/geologica-extralight.woff') format('woff');
     font-weight: 200;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'geologica';
-    src: url('assets/fonts/geologica-light.woff') format('woff');
+    src: url('/assets/fonts/geologica-light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'geologica';
-    src: url('assets/fonts/geologica-medium.woff') format('woff');
+    src: url('/assets/fonts/geologica-medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'geologica';
-    src: url('assets/fonts/geologica-regular.woff') format('woff');
+    src: url('/assets/fonts/geologica-regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'saar';
-    src: url('assets/fonts/saar.woff') format('woff');
+    src: url('/assets/fonts/saar.woff') format('woff');
     font-weight: 400;
     font-style: normal;
   }
@@ -38,8 +38,17 @@
   font-family: 'geologica';
   font-family: 'saar';
   background-color: #0A0A0A;
-  margin-left: 20px;
-  margin-right: 20px;
+  overflow-x: hidden;
+  height: 100vh; /* максимум пространства экрана */
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  }
+
+  .page {
+  min-height: 100vh;
+  box-sizing: border-box;
   }
 
   .title {
@@ -48,10 +57,6 @@
     letter-spacing: 1px;
     font-size: 32px;
     font-weight: 400;
-  }
-
-  .start-btn {
-    
   }
 
   .carousel {
