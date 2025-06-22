@@ -1,5 +1,8 @@
+require('dotenv').config(); // ← Сначала подключай dotenv!
+
+console.log('TOKEN:', process.env.BOT_TOKEN); // ← Теперь токен должен быть не undefined
+
 const { Telegraf } = require('telegraf');
-require('dotenv').config({ path: './bot/.env' });
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
