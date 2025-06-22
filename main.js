@@ -38,8 +38,8 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-// Вход в полноэкранный режим
-Telegram.WebApp.request_fullscreen();
-
-// Выход из полноэкранного режима
-Telegram.WebApp.exit_fullscreen();
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.Telegram && Telegram.WebApp && Telegram.WebApp.requestFullscreen) {
+    Telegram.WebApp.requestFullscreen();
+  }
+});
