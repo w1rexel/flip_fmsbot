@@ -254,16 +254,13 @@
   }
 
   .card {
+    width: 100%;
     background-color: white;
-    width: 165px;
-    height: 165px;
     border-radius: 10px;
-    display: inline-block;
-    flex: 1 1 0;
     aspect-ratio: 1/1;
-    max-width: 165px;
-    
-    
+    gap: 20px;
+    max-width: 300px;
+
   }
   .cards {
     width: 100%;
