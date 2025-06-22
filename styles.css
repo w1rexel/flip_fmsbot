@@ -252,3 +252,22 @@
   .tasks {
     font-family: 'geologica';
   }
+
+  .card {
+    background-color: white;
+    width: 165px;
+    height: 165px;
+    border-radius: 10px;
+    display: inline-block;
+    flex: 1 1 0;
+    aspect-ratio: 1/1;
+    max-width: 165px;
+    
+    
+  }
+  .cards {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
