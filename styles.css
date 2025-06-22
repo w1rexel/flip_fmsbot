@@ -42,6 +42,41 @@
   margin-right: 20px;
   }
 
+  #splash {
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .5s;
+  }
+  
+  .splash-logo {
+    width: 230px;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar-bg {
+    width: 230px;
+    height: 5px;
+    background: #282828;
+    border-radius: 1px;
+    overflow: hidden;
+    margin-top: 0px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #F25B02 0%, #B31414 100%);
+    transition: width 1s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+  
+
+
   .title {
     color: white;
     text-align: center;

@@ -43,3 +43,21 @@ window.addEventListener('DOMContentLoaded', () => {
     Telegram.WebApp.requestFullscreen();
   }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const fill = document.querySelector('.progress-bar-fill');
+
+  // Запуск анимации полосы (можешь сделать несколько шагов если хочешь)
+  setTimeout(() => {
+    fill.style.width = '100%';
+  }, 200); // Стартует через 0.2с
+
+  // Когда "загрузка" закончилась — убираем заставку
+  setTimeout(() => {
+    document.getElementById('splash').style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('main-app').style.display = '';
+    }, 500);
+  }, 1400); // Длительность заставки = 1.4 сек, подгони под свой UX
+});
