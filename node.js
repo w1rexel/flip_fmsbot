@@ -17,3 +17,12 @@ bot.command('start', (ctx) => {
 });
 
 bot.launch();
+// Первое включение transition и старт
+track.style.transition = 'transform 0.2s linear';
+animate();
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.Telegram && Telegram.WebApp) {
+    Telegram.WebApp.expand();
+    Telegram.WebApp.requestFullscreen();
+  }
+});
