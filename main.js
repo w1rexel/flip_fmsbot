@@ -15,3 +15,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 1400);
   }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.Telegram && Telegram.WebApp && typeof Telegram.WebApp.requestFullscreen === 'function') {
+    Telegram.WebApp.requestFullscreen();
+  }
+});
+if (window.Telegram && Telegram.WebApp && typeof Telegram.WebApp.exitFullscreen === 'function') {
+  Telegram.WebApp.exitFullscreen();
+}
