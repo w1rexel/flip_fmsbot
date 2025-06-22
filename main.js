@@ -1,4 +1,8 @@
-onst track = document.querySelector('.carousel-images');
+if (window.Telegram && Telegram.WebApp) {
+  Telegram.WebApp.request_fullscreen();
+}
+
+const track = document.querySelector('.carousel-images');
 const cards = Array.from(track.children);
 
 const gap = 15;
@@ -43,3 +47,4 @@ window.addEventListener('DOMContentLoaded', () => {
     Telegram.WebApp.requestFullscreen();
   }
 });
+
